@@ -18,7 +18,7 @@ jobs:
         
       - name: Run Custom Action
         #uses: bforl/FeatureBuilderOutput/.github/actions/getOutput@v1
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@v1
+        uses: bforl/FeatureBuilder/.github/actions/createoutput@main
         with:
           output-path: ${{github.workspace}}/output53/build-result.txt
 
