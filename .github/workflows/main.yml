@@ -1,0 +1,29 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: List files at start
+        shell: pwsh
+        run: Get-ChildItem | Select-Object -ExpandProperty FullName
+        
+      - uses: actions/checkout@v4
+
+      - name: List files before
+        shell: pwsh
+        run: Get-ChildItem | Select-Object -ExpandProperty FullName
+        
+      - name: Run Custom Action
+        uses: ./.github/actions/createoutput
+        with:
+          output-path: ${{github.workspace}}/output53/build-result.txt
+
+      - name: List files after
+        shell: pwsh
+        run: Get-ChildItem | Select-Object -ExpandProperty FullName
+
+      - run: cat "${{github.workspace}}/output53/build-result.txt"
+        shell: bash
