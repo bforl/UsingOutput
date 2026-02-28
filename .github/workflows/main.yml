@@ -17,7 +17,8 @@ jobs:
         run: Get-ChildItem | Select-Object -ExpandProperty FullName
         
       - name: Run Custom Action
-        uses: bforl/FeatureBuilderOutput/.github/actions/getOutput@v1
+        #uses: bforl/FeatureBuilderOutput/.github/actions/getOutput@v1
+        uses: bforl/FeatureBuilder/.github/actions/createoutput@v1
         with:
           output-path: ${{github.workspace}}/output53/build-result.txt
 
