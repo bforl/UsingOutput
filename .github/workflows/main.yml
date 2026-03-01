@@ -40,7 +40,7 @@ jobs:
         shell: bash
 
       - name: Run Custom Action B
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@1outputV1
+        uses: bforl/FeatureBuilder/.github/actions/createoutput@outputV1
         with:
           ref: v1.0.2
           output-path: ${{github.workspace}}/output53/build-result.txt
