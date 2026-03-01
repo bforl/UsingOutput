@@ -32,7 +32,7 @@ jobs:
 
 
       - name: Run Custom Action A
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@A
+        uses: bforl/FeatureBuilder/.github/actions/createoutput@1.0.1
         with:
           output-path: ${{github.workspace}}/output53/build-result.txt
 
@@ -40,7 +40,7 @@ jobs:
         shell: bash
 
       - name: Run Custom Action B
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@B
+        uses: bforl/FeatureBuilder/.github/actions/createoutput@1.0.2
         with:
           output-path: ${{github.workspace}}/output53/build-result.txt
 
@@ -48,7 +48,7 @@ jobs:
         shell: bash
 
       - name: Run Custom Action C
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@C
+        uses: bforl/FeatureBuilder/.github/actions/createoutput@1.0.3
         with:
           output-path: ${{github.workspace}}/output53/build-result.txt
 
