@@ -21,7 +21,7 @@ jobs:
       - name: Run Custom Action A
         uses: bforl/FeatureBuilder/.github/actions/createoutput@fg-v1.0
         with:
-          version: 1.0.1
+          version: v1.0.1
           output-path: ${{github.workspace}}/output53/build-result.txt
 
       - run: cat "${{github.workspace}}/output53/build-result.txt"
@@ -33,7 +33,7 @@ jobs:
       - name: Run Custom Action C
         uses: bforl/FeatureBuilder/.github/actions/createoutput@fg-v1.0
         with:
-          version: 1.0.2
+          version: v1.0.2
           output-path: ${{github.workspace}}/output53/build-result.txt
 
       - run: cat "${{github.workspace}}/output53/build-result.txt"
