@@ -15,47 +15,32 @@ jobs:
       - name: List files before
         shell: pwsh
         run: Get-ChildItem | Select-Object -ExpandProperty FullName
-        
-      - name: Run Custom Action
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@outputV1
-        with:
-          output-path: ${{github.workspace}}/output53/build-result.txt
-
-      - name: List files after
-        shell: pwsh
-        run: Get-ChildItem | Select-Object -ExpandProperty FullName
-
-      - run: cat "${{github.workspace}}/output53/build-result.txt"
-        shell: bash
 
 
 
       - name: Run Custom Action A
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@outputV2
+        uses: bforl/FeatureBuilder/.github/actions/createoutput@fg-v1.0
         with:
-          ref: 1.0.1
+          version: 1.0.1
           output-path: ${{github.workspace}}/output53/build-result.txt
 
       - run: cat "${{github.workspace}}/output53/build-result.txt"
         shell: bash
 
-      - name: Run Custom Action B
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@outputV2
-        with:
-          ref: 1.0.2
-          output-path: ${{github.workspace}}/output53/build-result.txt
 
-      - run: cat "${{github.workspace}}/output53/build-result.txt"
-        shell: bash
+
 
       - name: Run Custom Action C
-        uses: bforl/FeatureBuilder/.github/actions/createoutput@outputV2
+        uses: bforl/FeatureBuilder/.github/actions/createoutput@fg-v1.0
         with:
-          ref: 1.0.3
+          version: 1.0.2
           output-path: ${{github.workspace}}/output53/build-result.txt
 
       - run: cat "${{github.workspace}}/output53/build-result.txt"
         shell: bash
+
+
+        
 
       - name: Run Custom Action Main
         uses: bforl/FeatureBuilder/.github/actions/createoutput@main
