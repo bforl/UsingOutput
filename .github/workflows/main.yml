@@ -33,7 +33,7 @@ jobs:
       - name: Run Custom Action A
         uses: bforl/FeatureBuilder/.github/actions/createoutput@outputV1
         with:
-          ref: v1.0.1
+          ref: 1.0.1
           output-path: ${{github.workspace}}/output53/build-result.txt
 
       - run: cat "${{github.workspace}}/output53/build-result.txt"
@@ -42,7 +42,7 @@ jobs:
       - name: Run Custom Action B
         uses: bforl/FeatureBuilder/.github/actions/createoutput@outputV1
         with:
-          ref: v1.0.2
+          ref: 1.0.2
           output-path: ${{github.workspace}}/output53/build-result.txt
 
       - run: cat "${{github.workspace}}/output53/build-result.txt"
@@ -51,7 +51,7 @@ jobs:
       - name: Run Custom Action C
         uses: bforl/FeatureBuilder/.github/actions/createoutput@outputV1
         with:
-          ref: v1.0.3
+          ref: 1.0.3
           output-path: ${{github.workspace}}/output53/build-result.txt
 
       - run: cat "${{github.workspace}}/output53/build-result.txt"
